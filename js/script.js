@@ -20,6 +20,27 @@ $('body').vegas({
 
 // Nicescroll
 
-$(document).ready(function() {  
-	$("html").niceScroll();
+// $(document).ready(function() {  
+// 	$("html").niceScroll();
+// });
+
+
+// Navbar effects
+
+$(document).ready(function() {
+	$('.navbar-brand').click(function(e) {
+		e.preventDefault();
+		$('.nav-disappear:visible').hide("slow");
+		$('.nav-disappear:hidden').show("fast");
+	});
+
+	$(document).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if (scroll>0) {
+			$('.nav-disappear').hide("slow");
+		}
+		else {
+			$('.nav-disappear').show("fast");
+		}
+	});
 });
