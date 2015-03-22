@@ -16,11 +16,70 @@ body {
   font-weight:300;
   font-size: 14pt;
   line-height: 150%;
-
   overflow-y:hidden;
 }
 
+p::selection {
+  background:rgba(256,256,256,0);
+  color:$redcolor;
+}
+
+.jumbotron {
+  background-color:rgba(0,0,0,0);
+  text-align:center;
+  padding-bottom:30%;
+}
+
+.jumbotron h1, h2, h3 {
+  font-size:96pt;
+  font-weight:100;
+  text-transform: uppercase;
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
+}
+.jumbotron a {
+  color:white;
+  font-weight:300;
+  text-decoration: none;
+
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+.jumbotron a:hover {
+  text-decoration: none;
+  color:$redcolor;
+}
+.jumbo-container {
+  opacity:1;
+}
+
+.navbar-nav a {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.navbar-nav a:hover {
+  outline: $redcolor solid;
+}
 .navbar-btn {
+  margin-top:-3px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  // @extend navbar a;
+  margin-right:5px;
+}
+.navbar-btn:hover {
+  outline: $redcolor solid;
 }
 .nav-visible {
   display:inline;
@@ -33,12 +92,20 @@ body {
   padding: 0 0 0 0;
 }
 
+.nav-appear {
+  // position:absolute;
+  display:inline;
+  vertical-align: center;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
 .main {
   margin-top: 10%;
 }
 
 .section {
-  margin: 200px 0 200px 0;
+  margin: -30px 0 25% 0;
   padding: 100px 0 100px 0;
   background-color:white;
 }
@@ -73,7 +140,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(179,179,179,0.8);
+  background-color: rgba(179,179,179,1);
+  opacity:0.5;
   z-index: -1;
   height: 100%;
   width: 100%;

@@ -10,6 +10,63 @@ body {
   line-height: 150%;
   overflow-y: hidden; }
 
+p::selection {
+  background: rgba(255, 255, 255, 0);
+  color: #BE1E2D; }
+
+.jumbotron {
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 30%; }
+
+.jumbotron h1, h2, h3 {
+  font-size: 96pt;
+  font-weight: 100;
+  text-transform: uppercase;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none; }
+
+.jumbotron a {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease; }
+
+.jumbotron a:hover {
+  text-decoration: none;
+  color: #BE1E2D; }
+
+.jumbo-container {
+  opacity: 1; }
+
+.navbar-nav a {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+
+.navbar-nav a:hover {
+  outline: #BE1E2D solid; }
+
+.navbar-btn {
+  margin-top: -3px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  margin-right: 5px; }
+
+.navbar-btn:hover {
+  outline: #BE1E2D solid; }
+
 .nav-visible {
   display: inline;
   height: 10%;
@@ -20,11 +77,17 @@ body {
   margin: 0 0 0 -5px;
   padding: 0 0 0 0; }
 
+.nav-appear {
+  display: inline;
+  vertical-align: center;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
 .main {
   margin-top: 10%; }
 
 .section {
-  margin: 200px 0 200px 0;
+  margin: -30px 0 25% 0;
   padding: 100px 0 100px 0;
   background-color: white; }
 
@@ -53,7 +116,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(179, 179, 179, 0.8);
+  background-color: #b3b3b3;
+  opacity: 0.5;
   z-index: -1;
   height: 100%;
   width: 100%;
