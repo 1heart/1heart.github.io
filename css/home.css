@@ -7,12 +7,42 @@ body {
   font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 14pt;
-  line-height: 150%;
-  overflow-y: hidden; }
+  line-height: 150%; }
 
-p::selection {
+p::selection, a::selection {
   background: rgba(255, 255, 255, 0);
   color: #BE1E2D; }
+
+h1::selection, h2::selection, h3::selection {
+  background: rgba(255, 255, 255, 0);
+  color: black; }
+
+.full-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1; }
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b3b3b3;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important; }
 
 .jumbotron {
   background-color: transparent;
@@ -87,16 +117,18 @@ p::selection {
   margin-top: 10%; }
 
 .section {
-  margin: -30px 0 25% 0;
+  margin: -30px 25% 25% 25%;
   padding: 100px 0 100px 0;
-  background-color: white; }
+  background-color: white;
+  border-radius: 60px; }
 
 .section-text p {
   color: gray;
   margin: 0 10% 0 10%; }
 
 .section-text h1, h2, h3 {
-  text-align: center; }
+  text-align: center;
+  font-weight: 300; }
 
 .preloader {
   position: fixed;
@@ -106,19 +138,6 @@ p::selection {
   bottom: 0;
   background-color: white;
   z-index: 9999;
-  height: 100%;
-  width: 100%;
-  overflow: hidden !important; }
-
-.background-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #b3b3b3;
-  opacity: 0.5;
-  z-index: -1;
   height: 100%;
   width: 100%;
   overflow: hidden !important; }
@@ -143,7 +162,11 @@ p::selection {
   transform: translateZ(0); }
 
 .parallax__layer--back {
-  transform: translateZ(-1px); }
+  transform: translateZ(-1px) scale(2); }
+
+.parallax-test {
+  margin: 10%;
+  text-align: center; }
 
 .navbar-default {
   padding-top: 1%;
