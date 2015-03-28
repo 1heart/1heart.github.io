@@ -3,11 +3,19 @@
 
 body {
   color: #BE1E2D;
-  background-color: white;
+  background-color: transparent;
   font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 14pt;
   line-height: 150%; }
+
+footer {
+  text-align: center;
+  padding: 1%; }
+
+footer::selection {
+  color: white;
+  background: transparent; }
 
 p::selection, a::selection {
   background: rgba(255, 255, 255, 0);
@@ -17,19 +25,9 @@ h1::selection, h2::selection, h3::selection {
   background: rgba(255, 255, 255, 0);
   color: black; }
 
-.full-background {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../img/1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: -1; }
+.fill-background {
+  margin: 0;
+  padding: 0; }
 
 .background-overlay {
   position: fixed;
@@ -37,7 +35,7 @@ h1::selection, h2::selection, h3::selection {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #b3b3b3;
+  background-color: #ff9999;
   opacity: 0.5;
   z-index: -1;
   height: 100%;
@@ -45,6 +43,7 @@ h1::selection, h2::selection, h3::selection {
   overflow: hidden !important; }
 
 .jumbotron {
+  padding-top: 10%;
   background-color: transparent;
   text-align: center;
   padding-bottom: 30%; }
@@ -113,12 +112,9 @@ h1::selection, h2::selection, h3::selection {
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
 
-.main {
-  margin-top: 10%; }
-
 .section {
-  margin: -30px 25% 25% 25%;
-  padding: 100px 0 100px 0;
+  margin: 10%;
+  padding: 5%;
   background-color: white;
   border-radius: 60px; }
 
@@ -164,9 +160,10 @@ h1::selection, h2::selection, h3::selection {
 .parallax__layer--back {
   transform: translateZ(-1px) scale(2); }
 
-.parallax-test {
-  margin: 10%;
-  text-align: center; }
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d; }
 
 .navbar-default {
   padding-top: 1%;

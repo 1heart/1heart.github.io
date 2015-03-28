@@ -30,9 +30,12 @@ $('#start').click(function() {
 var navbarHeight = $('.navbar').offset()['top'];
 
 $(document).ready(function() {
+	// fade in background
 	$('.full-background').fadeIn(3000);
-	$('.navbar-brand').click(function(e) {
-		e.preventDefault();
+	// prevent clicking from going to link
+	// $('.navbar').click(function(e) {e.preventDefault();});
+	// hover showing
+	$('.navbar').hover(function(e) {
 		$('.nav-disappear:visible').hide("slow");
 		$('.nav-disappear:hidden').show("fast");
 		$('.nav-appear:visible').hide("slow");
@@ -41,7 +44,7 @@ $(document).ready(function() {
 
 	$(document).scroll(function() {
 		var scroll = $(this).scrollTop();
-		if (scroll>navbarHeight) {
+		if (scroll>=navbarHeight-50) {
 			$('.nav-disappear').hide("slow");
 			$('.nav-appear').show("fast");
 		}
