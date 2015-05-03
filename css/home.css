@@ -10,11 +10,12 @@ body {
   line-height: 150%; }
 
 footer {
+  color: white;
   text-align: center;
   padding: 1%; }
 
 footer::selection {
-  color: white;
+  color: #D7D7DC;
   background: transparent; }
 
 p::selection, a::selection {

@@ -1,4 +1,5 @@
 $redcolor: #BE1E2D;
+$lightgraycolor: #D7D7DC;
 $font-stack: Lato, sans-serif;
 
 html {
@@ -21,11 +22,12 @@ body {
 }
 
 footer {
+  color:white;
   text-align: center;
   padding:1%;
 }
 footer::selection {
-  color:white;
+  color:$lightgraycolor;
   background:transparent;
 }
 
@@ -44,21 +46,6 @@ h1::selection, h2::selection, h3::selection {
   padding:0;
 }
 
-.full-background {
-  // display:none;
-  // position:fixed;
-  // top:0;
-  // right:0;
-  // bottom:0;
-  // left:0;
-  // // background: url(../img/4.jpg) no-repeat center center fixed; 
-  // background:transparent;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-  // z-index:-1;
-}
 
 .background-overlay {
   position: fixed;
@@ -160,7 +147,11 @@ h1::selection, h2::selection, h3::selection {
   background-color:white;
     border-radius: 60px;
 }
-
+.section-container {
+  // height: 500px;
+  // min-height: 20%;
+  // background-color:transparent;
+}
 .section-text {
 
 }

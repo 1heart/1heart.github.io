@@ -31,7 +31,7 @@ var navbarHeight = $('.navbar').offset()['top'];
 
 $(document).ready(function() {
 	// fade in background
-	$('.full-background').fadeIn(3000);
+	// $('.fill-background').fadeIn(3000);
 	// prevent clicking from going to link
 	// $('.navbar').click(function(e) {e.preventDefault();});
 	// hover showing
@@ -52,8 +52,23 @@ $(document).ready(function() {
 			$('.nav-disappear').show("fast");
 			$('.nav-appear').hide("slow");
 		}
+		// $('.section').each(function () {
+		// console.log(scroll + " " + $(this).offset().top);
+		//     var t = $(this).offset().top;
+		//     if (scroll >= t-150) {
+		// 		$(this).fadeTo('medium', 1.0);
+		//     }
+		//     else {
+		// 		$(this).fadeTo('medium', 0.5);
+		//     }
+
+		// });
+
+
+
 	});
 });
+
 
 $(window).bind('scroll', function() {
 	// Sticky scroll
