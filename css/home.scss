@@ -3,285 +3,77 @@ $lightgraycolor: #D7D7DC;
 $font-stack: Lato, sans-serif;
 
 html {
+	font-family: $font-stack;
+	font-weight: 300;
+	text-align: center;
+	margin-left: 30%;
+	margin-right: 30%;
 }
-
-::-webkit-scrollbar { 
-    display: none; 
-}
-
-body {
-      // overflow: -moz-scrollbars-none;
-
-  color:$redcolor;
-  background-color: transparent;
-  font-family: $font-stack;
-  font-weight:300;
-  font-size: 14pt;
-  line-height: 150%;
-  // overflow-y:hidden;
-}
-
-footer {
-  color:white;
-  text-align: center;
-  padding:1%;
-}
-footer::selection {
-  color:$lightgraycolor;
-  background:transparent;
-}
-
-p::selection, a::selection {
-  background:rgba(256,256,256,0);
-  color:$redcolor;
-}
-
-h1::selection, h2::selection, h3::selection {
-  background:rgba(256,256,256,0);
-  color:black;
-}
-
-.fill-background {
-  margin: 0;
-  padding:0;
+ul {
+	list-style-type: none;
 }
 
 
-.background-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255,153,153,1);
-  opacity:0.5;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  overflow: hidden !important;
-}
-.jumbotron {
-  padding-top:10%;
-  background-color:rgba(0,0,0,0);
-  text-align:center;
-  padding-bottom:30%;
+a {
+	color: black;
+	transition: color 1.0s ease;
+	transition: fill 1.0s ease;
+	text-decoration:none;
 }
 
-.jumbotron h1, h2, h3 {
-  font-size:96pt;
-  font-weight:100;
-  text-transform: uppercase;
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
-}
-.jumbotron a {
-  color:white;
-  font-weight:300;
-  text-decoration: none;
-
-  -webkit-transition: all 1000ms ease;
-  -moz-transition: all 1000ms ease;
-  -ms-transition: all 1000ms ease;
-  -o-transition: all 1000ms ease;
-  transition: all 1000ms ease;
-}
-.jumbotron a:hover {
-  text-decoration: none;
-  color:$redcolor;
-}
-.jumbo-container {
-  opacity:1;
+a:hover {
+	color: $redcolor;
 }
 
-.navbar {
-  // display:none;
+.menubar, .links {
+	margin:0;
+	padding:0;
+	font-weight: 500;
+	text-transform: uppercase;
+	position:fixed;
+	top:10%;
+	vertical-align:middle;
+
+	li {
+		margin-top:10px;
+		margin-bottom:10px;
+	}
 }
 
-.navbar-nav a {
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-.navbar-nav a:hover {
-  outline: $redcolor solid;
-}
-.navbar-btn {
-  margin-top:-3px;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-  // @extend navbar a;
-  margin-right:5px;
-}
-.navbar-btn:hover {
-  outline: $redcolor solid;
-}
-.nav-visible {
-  display:inline;
-  height:10%;
-  padding: 0 0 0 0;
-}
-.nav-disappear {
-  display:inline;
-  margin: 0 0 0 -5px;
-  padding: 0 0 0 0;
+.menubar {
+	float: left;
+	left:10px;
 }
 
-.nav-appear {
-  // position:absolute;
-  display:inline;
-  vertical-align: center;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+.links {
+	float: right;
+	right:40px;
 }
 
-.section {
-  margin:10%;
-  padding: 5%;
-  background-color:white;
-    border-radius: 60px;
-}
-.section-container {
-  // height: 500px;
-  // min-height: 20%;
-  // background-color:transparent;
-}
-.section-text {
-
-}
-.section-text p {
-  color:gray;
-  margin: 0 10% 0 10%;
-}
-.section-text h1, h2, h3 {
-  text-align: center;
-  font-weight:300;
+.links img {
+	height: 20px;
+	width: 20px;
 }
 
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  z-index: 9999;
-  height: 100%;
-  width: 100%;
-  overflow: hidden !important;
+.title {
+	font-weight: 100;
+	font-size: 48pt;
+	text-transform: uppercase;
+	letter-spacing: 4px;
 }
 
-
-.container {
-  width: 100% !important;
+.heading {
+	p {
+		font-weight: 500;
+	}
 }
 
-
-// Parallax
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
-}
-.parallax__group {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
+.heading, .main {
+	padding-top: 300px;
+	padding-bottom: 300px;
 }
 
-
-// Navbar customization 
-
-$bgDefault      : white;
-$bgHighlight    : $redcolor;
-$colDefault     : $redcolor;
-$colHighlight   : $redcolor;
-$dropDown       : false;
-.navbar-default {
-  // hide the background:
-      // background: none !important; 
-      // border: 0 !important;
-      // box-shadow: none !important;
-      // -webkit-box-shadow: none !important;
-  padding-top:1%;
-  background-color: $bgDefault;
-  border-color: $bgHighlight;
-  text-transform: uppercase;
-  font-size: 18px;
-  .navbar-brand {
-    font-size: 32px;
-    color: $colDefault;
-    &:hover, &:focus { 
-      color: $colHighlight; }}
-  .navbar-text {
-
-    color: $colDefault; }
-  .navbar-nav {
-    > li {
-      > a {
-        color: $colDefault;
-        &:hover,  &:focus {
-          color: $colHighlight; }}
-      @if $dropDown {
-        > .dropdown-menu {
-          background-color: $bgDefault;
-          > li > a {
-            color: $colDefault;
-            &:hover,  &:focus {
-              color: $colHighlight;
-              background-color: $bgHighlight; }}
-          .divider {
-            background-color: $bgHighlight;}}}
-    }
-    > .active {
-      > a, > a:hover, > a:focus {
-        color: $colHighlight;
-        background-color: $bgHighlight; }}
-    > .open {
-      > a, > a:hover, > a:focus {
-        color: $colHighlight;
-        background-color: $bgHighlight; }}}
-  .navbar-toggle {
-    border-color: $bgHighlight;
-    &:hover, &:focus {
-      background-color: $bgHighlight; }
-    .icon-bar {
-      background-color: $colDefault; }}
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $colDefault; }
-  .navbar-link {
-    color: $colDefault;
-    &:hover {
-      color: $colHighlight; }}}
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu {
-    > li > a {
-      color: $colDefault;
-      &:hover, &:focus {
-        color: $colHighlight; }}
-    > .active {
-      > a, > a:hover, > a:focus {
-        color: $colHighlight;
-        background-color: $bgHighlight; }}}
+::selection {
+	color: $redcolor;
+	background: none;
 }
