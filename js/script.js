@@ -14,7 +14,6 @@ $(document).ready(function() {
 
 $(document).scroll(function() {
 	var y = $(this).scrollTop();
-	console.log(y);
 	if (y > mainOffset - 300) {
 		$('.menubar, .links').fadeIn(animationDuration);
 	} else {
@@ -23,9 +22,11 @@ $(document).scroll(function() {
 });
 
 function hideAll() {
-	$("#main").children().fadeOut(animationDuration);
+	$("#main").children().hide();
 	$("#home-link, #art-link, #music-link, #work-link, #writings-link, #resume-link").removeClass('selected', animationDuration);
 }
+
+// Here follows some terrible code.
 
 $('#go, #home-link').click(function() {
 	hideAll();
@@ -56,10 +57,10 @@ $('#resume-link').click(function(e) {
 	window.location.href = "https://www.dropbox.com/s/5l6kmpxkq9efdeb/resume.pdf?dl=0";
 });
 
-$('.menubar, .links').click(function(e) {
+$('.menubar').click(function(e) {
 	e.preventDefault();
 
-	// $('html, body').animate({
-	// 	scrollTop: 789
-	// }, animationDuration);
+	$('html, body').animate({
+		scrollTop: 900
+	}, animationDuration);
 });
