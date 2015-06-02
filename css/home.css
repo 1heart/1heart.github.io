@@ -5,6 +5,10 @@ html {
   margin-left: 30%;
   margin-right: 30%; }
 
+::selection {
+  color: #BE1E2D;
+  background: none; }
+
 ul {
   list-style-type: none; }
 
