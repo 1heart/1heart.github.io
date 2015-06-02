@@ -25,17 +25,17 @@
     <hr>
   </div>
 
-  <div class="menubar">
+  <div class="menubar hidden">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Art</a></li>
-      <li><a href="#">Music</a></li>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Writings</a></li>
-      <li><a href="#">Resume</a></li>
+      <li><a id="home-link" href="#">Home</a></li>
+      <!-- <li><a id="art-link" href="#">Art</a></li> -->
+      <li><a id="music-link" href="#">Music</a></li>
+      <li><a id="work-link" href="#">Work</a></li>
+      <!-- <li><a id="writings-link" href="#">Writings</a></li> -->
+      <li><a id="resume-link" href="https://www.dropbox.com/s/5l6kmpxkq9efdeb/resume.pdf?dl=0">Resume</a></li>
     </ul>
   </div>
-  <div class="links">
+  <div class="links hidden">
     <ul>
       <li><a href="mailto:yixin.lin@duke.edu"><img src="icons/svg/email5.svg" alt="Email"></a></li>
       <li><a href="https://www.facebook.com/yixin1996"><img src="icons/svg/facebook55.svg" alt="Facebook"></a></li>
@@ -44,12 +44,37 @@
     </ul>
   </div>
 
-  <div class="main">
-    <div class="beginning">
-    <p>I'm a student at Duke who's interested in entrepreneurship, computer science (especially AI), and music.</p>
+  <div id="main">
+    <div id="home" class="hidden">
+    <p>I'm Duke student and KPCB Engineering Fellow, thinking about majoring in math and computer science. I'm interested in technology, music, entrepreneurship, design, and art.</p>
+    </div>
+    <div id="art" class="hidden">
+    </div>
+    <div id="music" class="hidden">
+      <p>Liszt/Paganini &mdash; La Campanella</p>
+      <div class="video-container">
+      <iframe width="100%" height="50%" src="https://www.youtube.com/embed/QYcyQVW-kWQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p>Bizet/Borne &mdash; Fantaisie brillante sur 'Carmen'</p>
+      <div class="video-container">
+      <iframe width="100%" height="50%" src="https://www.youtube.com/embed/XZO80yteJOs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="work" class="hidden">
+      I'm interested in computer science and building things with technology. For details, check out the links below.
+      <ul>
+        <li><a href="https://github.com/1heart">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/linyixin">LinkedIn</a></li>
+        <li><a href="https://www.dropbox.com/s/5l6kmpxkq9efdeb/resume.pdf?dl=0">Resume</a></li>
+      </ul>
+    </div>
+    <div id="writings" class="hidden">
+    </div>
+    <div id="resume" class="hidden">
     </div>
   </div>
-
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Custom JS scripts. -->
     <script src="js/script.js"></script>
 </body>

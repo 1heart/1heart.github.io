@@ -13,15 +13,26 @@ ul {
 	list-style-type: none;
 }
 
-
 a {
-	color: black;
-	transition: color 1.0s ease;
-	transition: fill 1.0s ease;
+	color: gray;
+	transition: all 1.0s ease;
 	text-decoration:none;
+	font-weight: 500;
 }
 
 a:hover {
+	color: $redcolor;
+	transition: color 1.0s ease;
+}
+
+.hidden {
+	display: none;
+}
+.shown {
+	display: inline;
+}
+.selected {
+	font-weight:bold;
 	color: $redcolor;
 }
 
@@ -62,18 +73,30 @@ a:hover {
 	letter-spacing: 4px;
 }
 
-.heading {
-	p {
-		font-weight: 500;
-	}
-}
 
-.heading, .main {
+.heading {
 	padding-top: 300px;
 	padding-bottom: 300px;
 }
 
-::selection {
-	color: $redcolor;
-	background: none;
+#main {
+	padding-top:300px;
+	padding-bottom:500px;
 }
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
