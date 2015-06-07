@@ -49,9 +49,7 @@ $('#work-link').click(function() {
 	$('#work-link').addClass('selected');
 });
 $('#writings-link').click(function() {
-	hideAll();
-	$('#writings').fadeIn(animationDuration);
-	$('#writings-link').addClass('selected');
+	window.location.href = "writings";
 });
 $('#resume-link').click(function(e) {
 	window.location.href = "https://www.dropbox.com/s/5l6kmpxkq9efdeb/resume.pdf?dl=0";
