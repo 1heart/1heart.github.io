@@ -1,84 +1,17 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal webpage">
-  <meta name="author" content="Yixin LIn">
-  <link rel="icon" href="">
-
-  <title>Yixin Lin</title>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/home.css">
-  <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Karma:400,300' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="static/1.ico">
-</head>
-
-<body>
-  <div class="heading">
-    <div class="title">
-      Yixin Lin
-    </div>
-    <p><a id="go" href="#"><img  style="width:10px;height:10px;" src="icons/svg/right11.svg" alt=""> hello.</a></p>
-    <hr>
-  </div>
-
-  <div class="menubar hidden">
-    <ul>
-      <li><a id="home-link" href="#">Home</a></li>
-      <!-- <li><a id="art-link" href="#">Art</a></li> -->
-      <li><a id="music-link" href="#">Music</a></li>
-      <li><a id="work-link" href="#">Work</a></li>
-      <li><a id="writings-link" href="writings">Writings</a></li>
-      <li><a id="resume-link" href="/resume">Resume</a></li>
-    </ul>
-  </div>
-  <div class="links hidden">
-    <ul>
-      <li><a href="mailto:yixin.lin@duke.edu"><img src="icons/svg/email5.svg" alt="Email"></a></li>
-      <li><a href="https://www.facebook.com/yixin1996"><img src="icons/svg/facebook55.svg" alt="Facebook"></a></li>
-      <li><a href="https://www.linkedin.com/in/linyixin"><img src="icons/svg/linkedin24.svg" alt="LinkedIn"></a></li>
-      <li><a href="https://github.com/1heart"><img src="icons/svg/github7.svg" alt="Github"></a></li>
-    </ul>
-  </div>
-
-  <div id="main">
-    <div id="home" class="hidden">
-    <p>I'm Duke student and KPCB Engineering Fellow, thinking about majoring in math and computer science. I'm interested in technology, music, entrepreneurship, design, and art.</p>
-    </div>
-    <div id="art" class="hidden">
-    </div>
-    <div id="music" class="hidden">
-    <a href="https://www.youtube.com/watch/QYcyQVW-kWQ" target="_blank"><img src="img/liszt.jpg"></a>
-    <a href="https://www.youtube.com/watch/XZO80yteJOs" target="_blank"><img src="img/flute.jpg"></a>
-      <!-- <p>Liszt/Paganini &mdash; La Campanella</p>
-      <div class="video-container">
-      <iframe width="100%" height="50%" src="https://www.youtube.com/embed/QYcyQVW-kWQ" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <p>Bizet/Borne &mdash; Fantaisie brillante sur 'Carmen'</p>
-      <div class="video-container">
-      <iframe width="100%" height="50%" src="https://www.youtube.com/embed/XZO80yteJOs" frameborder="0" allowfullscreen></iframe>
-      </div> -->
-    </div>
-    <div id="work" class="hidden">
-      I'm interested in computer science and building things with technology. For details, check out the links below.
-      <ul>
-        <li><a href="https://github.com/1heart">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/linyixin">LinkedIn</a></li>
-        <li><a href="/resume">Resume</a></li>
-      </ul>
-    </div>
-    <div id="writings" class="hidden">
-    </div>
-    <div id="resume" class="hidden">
-    </div>
-  </div>
-    <!-- JQuery -->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Custom JS scripts. -->
-    <script src="js/script.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel" src="src/App.js"></script>
+  </body>
 </html>
