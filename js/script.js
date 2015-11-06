@@ -52,7 +52,7 @@ $('#writings-link').click(function() {
 	window.location.href = "writings";
 });
 $('#resume-link').click(function(e) {
-	window.location.href = "/resume";
+	window.location.href = "https://github.com/1heart/resume/raw/master/resume.pdf";
 });
 
 $('.menubar').click(function(e) {
