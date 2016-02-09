@@ -5,7 +5,7 @@ var map = {
   "facebook-link": "facebook",
   "linkedin-link": "linkedin",
   "github-link": "github",
-}
+};
 
 $(".link").each(function(index) {
   $(this).hover(function() {

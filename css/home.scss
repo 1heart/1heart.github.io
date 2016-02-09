@@ -21,24 +21,25 @@ ul {
 
 a {
   color: gray;
-  transition: all 1.0s ease;
+  // transition: all 1.0s ease;
   text-decoration:none;
   font-weight: 500;
 }
 
-a:hover {
-  color: $redcolor;
-  transition: color 2.0s ease;
-}
+// a:hover {
+//   color: $redcolor;
+//   transition: color 2.0s ease;
+// }
 
 #hello-link {
+  display: inline;
   color: $redcolor;
 }
 
 @-webkit-keyframes redGlow {
-  from { opacity:0.3;}
+  from { opacity:0.7;}
   50% { opacity:1;}
-  to { opacity:0.3;}
+  to { opacity:0.7;}
 }
 #go {
   -webkit-animation-name: redGlow;
@@ -65,6 +66,9 @@ a:hover {
   li {
     margin: 10px;
     display: inline-block;
+    -webkit-animation-name: redGlow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
   }
 }
 
@@ -96,6 +100,12 @@ a:hover {
   // width: 40%;
   letter-spacing: 1pt;
   line-height: 150%;
+}
+
+#hello {
+  display: inline;
+  position: fixed;
+  margin: 0 0 0 -80pt;
 }
 
 #main {
