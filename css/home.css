@@ -1,3 +1,10 @@
+body, html {
+  height: 100%; }
+
+div.wrap {
+  height: 100%;
+  overflow: hidden; }
+
 html {
   font-family: Lato, sans-serif;
   font-weight: 300;
@@ -70,8 +77,8 @@ a {
   letter-spacing: 4px; }
 
 .heading {
-  padding-top: 300px;
-  padding-bottom: 300px; }
+  padding-top: 200pt;
+  padding-bottom: 200pt; }
 
 .content {
   margin: 0 auto;
@@ -80,7 +87,7 @@ a {
 
 #hello {
   display: inline;
-  position: fixed;
+  position: absolute;
   margin: 0 0 0 -80pt; }
 
 #main {
