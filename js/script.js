@@ -1,64 +1,18 @@
-mainOffset = $("#main").offset().top;
-
-animationDuration = 500;
-
-$("#go").click(function() {
-	$('html, body').animate({
-		scrollTop: mainOffset
-	}, animationDuration);
-});
-
-$(document).ready(function() {
-	$('.hidden').removeClass('hidden').hide();
-});
-
-$(document).scroll(function() {
-	var y = $(this).scrollTop();
-	if (y > mainOffset - 300) {
-		$('.menubar, .links').fadeIn(animationDuration);
-	} else {
-		$('.menubar, .links').fadeOut(animationDuration);
-	}
-});
-
-function hideAll() {
-	$("#main").children().hide();
-	$("#home-link, #art-link, #music-link, #work-link, #writings-link, #resume-link").removeClass('selected', animationDuration);
+var map = {
+  "resume-link": "resume",
+  "writings-link": "writings",
+  "email-link": "email",
+  "facebook-link": "facebook",
+  "linkedin-link": "linkedin",
+  "github-link": "github",
 }
 
-// Here follows some terrible code.
-
-$('#go, #home-link').click(function() {
-	hideAll();
-	$('#home').fadeIn(animationDuration);
-	$('#home-link').addClass('selected');
-});
-$('#art-link').click(function() {
-	hideAll();
-	$('#art').fadeIn(animationDuration);
-	$('#art-link').addClass('selected');
-});
-$('#music-link').click(function() {
-	hideAll();
-	$('#music').fadeIn(animationDuration);
-	$('#music-link').addClass('selected');
-});
-$('#work-link').click(function() {
-	hideAll();
-	$('#work').fadeIn(animationDuration);
-	$('#work-link').addClass('selected');
-});
-$('#writings-link').click(function() {
-	window.location.href = "writings";
-});
-$('#resume-link').click(function(e) {
-	window.location.href = "https://github.com/1heart/resume/raw/master/resume.pdf";
+$(".link").each(function(index) {
+  $(this).hover(function() {
+    var key = $(this).attr('id');
+    $("#hello-link").text(map[key] + ". ");
+  }, function() {
+    $("#hello-link").text("hello.");
+  });
 });
 
-$('.menubar').click(function(e) {
-	e.preventDefault();
-
-	$('html, body').animate({
-		scrollTop: 900
-	}, animationDuration);
-});
