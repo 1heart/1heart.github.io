@@ -1,8 +1,10 @@
+var email = "yixinlin" + "@" + "fb.com";
+
 var map = {
   "resume-link": "resume",
   "writings-link": "writings",
   "papers-link": "paper-review",
-  "email-link": "email: yixinlin at fb.com",
+  "email-link": "email (click to copy): " + email ,
   "facebook-link": "facebook",
   "linkedin-link": "linkedin",
   "github-link": "github",
@@ -16,4 +18,12 @@ $(".link").each(function(index) {
     $("#hello-link").text("hello.");
   });
 });
+
+function copyEmail() {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(email).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
 
