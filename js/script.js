@@ -1,4 +1,4 @@
-var email = "yixinlin" + "@" + "fb.com";
+var email = "yixin" + "@" + "yixinlin.net";
 
 var map = {
   "resume-link": "resume",
