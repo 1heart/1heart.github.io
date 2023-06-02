@@ -1,6 +1,7 @@
 var email = "yixin" + "@" + "yixinlin.net";
 
 var map = {
+  "twitter-link": "twitter",
   "resume-link": "resume",
   "writings-link": "writings",
   "papers-link": "paper-review",
