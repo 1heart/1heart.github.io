@@ -7,7 +7,7 @@ var map = {
   "papers-link": "paper-review",
   "email-link": "email (click to copy): " + email ,
   "facebook-link": "facebook",
-  "instagram-link": "instagram",
+  "insta-link": "instagram",
   "linkedin-link": "linkedin",
   "github-link": "github",
 };
